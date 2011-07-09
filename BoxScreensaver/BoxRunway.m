@@ -44,7 +44,7 @@
 	return [newBox autorelease];
 }
 
-- (void)pushNewBox:(Box *)box {
+- (void)pushNewBox:(Box *)box duration:(CGFloat)duration {
 	if (!boxStack) {
 		boxStack = [[NSMutableArray alloc] init];
 		NSAssert(minY != 0, @"At least one box must be generated before pushing a box.");
@@ -63,14 +63,16 @@
 		CGRect br = [b frame];
 		if (br.origin.y < 0 - br.size.height) {
 			// remove views that go over the top.
+			[[NSNotificationCenter defaultCenter] postNotificationName:BoxLostPointNotification object:b];
 			[boxStack removeObjectAtIndex:i];
+			[b removeFromSuperview];
 			i--;
 		} else {
 			br.origin.y -= moveUp;
 			// create view animation
 			CGPoint destination = CGPointMake(br.origin.x, br.origin.y);
 			ViewPositionAnimation * animation = [[ViewPositionAnimation alloc] initWithView:b destinationLocation:destination];
-			[animation start:0.75];
+			[animation start:0.75*duration];
 			[animation release];
 		}
 	}
@@ -78,7 +80,7 @@
 	[[self superview] addSubview:box];
 	CGPoint destinationBox = CGPointMake([self frame].origin.x, boxFrame.origin.y);
 	ViewPositionAnimation * boxAnimation = [[ViewPositionAnimation alloc] initWithView:box destinationLocation:destinationBox];
-	[boxAnimation start:1];
+	[boxAnimation start:duration*0.9];
 	[boxAnimation release];
 	[boxStack addObject:box];
 }
@@ -96,7 +98,18 @@
 	[boxStack removeObject:theBox];
 }
 
+- (void)removeFromSuperview {
+	[super removeFromSuperview];
+	[ViewPositionAnimation cancelActiveAnimations];
+	for (UIView * v in boxStack) {
+		[v removeFromSuperview];
+	}
+	[boxStack release];
+	boxStack = nil;
+}
+
 - (void)dealloc {
+	[boxStack release];
     [super dealloc];
 }
 

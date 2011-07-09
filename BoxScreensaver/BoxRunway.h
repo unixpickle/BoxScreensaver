@@ -32,8 +32,10 @@
 
 /**
  * Adds a box to the bottom.
+ * @param box The box to be pushed.
+ * @param duration The maximum time for animations to finish.
  */
-- (void)pushNewBox:(Box *)box;
+- (void)pushNewBox:(Box *)box duration:(CGFloat)duration;
 
 /**
  * Gets the first and therefore movable box on the runway.

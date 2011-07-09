@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA15D01813C8F84500E2CEB6 /* drop apple.png in Resources */ = {isa = PBXBuildFile; fileRef = FA15D01613C8F84500E2CEB6 /* drop apple.png */; };
+		FA15D01913C8F84500E2CEB6 /* drop broccoli.png in Resources */ = {isa = PBXBuildFile; fileRef = FA15D01713C8F84500E2CEB6 /* drop broccoli.png */; };
+		FA15D01C13C8F85D00E2CEB6 /* CornerDropper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA15D01B13C8F85D00E2CEB6 /* CornerDropper.m */; };
+		FA15D01F13C8F91000E2CEB6 /* SortGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA15D01E13C8F91000E2CEB6 /* SortGameViewController.m */; };
 		FA69346113C78E3C002AEF34 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA69346013C78E3C002AEF34 /* UIKit.framework */; };
 		FA69346313C78E3C002AEF34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA69346213C78E3C002AEF34 /* Foundation.framework */; };
 		FA69346513C78E3C002AEF34 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA69346413C78E3C002AEF34 /* CoreGraphics.framework */; };
@@ -29,6 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA15D01613C8F84500E2CEB6 /* drop apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drop apple.png"; sourceTree = "<group>"; };
+		FA15D01713C8F84500E2CEB6 /* drop broccoli.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drop broccoli.png"; sourceTree = "<group>"; };
+		FA15D01A13C8F85D00E2CEB6 /* CornerDropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CornerDropper.h; sourceTree = "<group>"; };
+		FA15D01B13C8F85D00E2CEB6 /* CornerDropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CornerDropper.m; sourceTree = "<group>"; };
+		FA15D01D13C8F91000E2CEB6 /* SortGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortGameViewController.h; sourceTree = "<group>"; };
+		FA15D01E13C8F91000E2CEB6 /* SortGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortGameViewController.m; sourceTree = "<group>"; };
+		FA15D02013C8FE9A00E2CEB6 /* GameScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScore.h; sourceTree = "<group>"; };
 		FA69345C13C78E3C002AEF34 /* BoxScreensaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoxScreensaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA69346013C78E3C002AEF34 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FA69346213C78E3C002AEF34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -78,6 +89,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA15D01413C8F31B00E2CEB6 /* Sort Box */ = {
+			isa = PBXGroup;
+			children = (
+				FA15D01A13C8F85D00E2CEB6 /* CornerDropper.h */,
+				FA15D01B13C8F85D00E2CEB6 /* CornerDropper.m */,
+			);
+			name = "Sort Box";
+			sourceTree = "<group>";
+		};
+		FA15D01513C8F83700E2CEB6 /* Corners */ = {
+			isa = PBXGroup;
+			children = (
+				FA15D01613C8F84500E2CEB6 /* drop apple.png */,
+				FA15D01713C8F84500E2CEB6 /* drop broccoli.png */,
+			);
+			name = Corners;
+			sourceTree = "<group>";
+		};
 		FA69345113C78E3C002AEF34 = {
 			isa = PBXGroup;
 			children = (
@@ -109,12 +138,16 @@
 		FA69346613C78E3C002AEF34 /* BoxScreensaver */ = {
 			isa = PBXGroup;
 			children = (
+				FA15D01413C8F31B00E2CEB6 /* Sort Box */,
 				FA69349913C8A03B002AEF34 /* Food */,
 				FA69348613C793DB002AEF34 /* Runway */,
 				FA69346F13C78E3C002AEF34 /* BoxScreensaverAppDelegate.h */,
 				FA69347013C78E3C002AEF34 /* BoxScreensaverAppDelegate.m */,
 				FA69347513C78E3C002AEF34 /* BoxScreensaverViewController.h */,
 				FA69347613C78E3C002AEF34 /* BoxScreensaverViewController.m */,
+				FA15D01D13C8F91000E2CEB6 /* SortGameViewController.h */,
+				FA15D01E13C8F91000E2CEB6 /* SortGameViewController.m */,
+				FA15D02013C8FE9A00E2CEB6 /* GameScore.h */,
 				FA69346713C78E3C002AEF34 /* Supporting Files */,
 			);
 			path = BoxScreensaver;
@@ -161,6 +194,7 @@
 		FA6934A013C8A33E002AEF34 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FA15D01513C8F83700E2CEB6 /* Corners */,
 				FA6934A313C8A45E002AEF34 /* broccoli_large.png */,
 				FA6934A113C8A348002AEF34 /* apple_large.png */,
 			);
@@ -232,6 +266,8 @@
 				FA69347A13C78E3C002AEF34 /* BoxScreensaverViewController.xib in Resources */,
 				FA6934A213C8A348002AEF34 /* apple_large.png in Resources */,
 				FA6934A413C8A45E002AEF34 /* broccoli_large.png in Resources */,
+				FA15D01813C8F84500E2CEB6 /* drop apple.png in Resources */,
+				FA15D01913C8F84500E2CEB6 /* drop broccoli.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +288,8 @@
 				FA6934B113C8C353002AEF34 /* EasingAnimation.m in Sources */,
 				FA6934B413C8C3F6002AEF34 /* EaseOutAnimation.m in Sources */,
 				FA6934B713C8C735002AEF34 /* ViewPositionAnimation.m in Sources */,
+				FA15D01C13C8F85D00E2CEB6 /* CornerDropper.m in Sources */,
+				FA15D01F13C8F91000E2CEB6 /* SortGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

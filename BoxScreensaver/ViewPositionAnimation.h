@@ -31,6 +31,11 @@
 + (NSArray *)activeAnimationsForView:(UIView *)theView;
 
 /**
+ * Cancels all animations on ALL views!
+ */
++ (void)cancelActiveAnimations;
+
+/**
  * Create an eased animation that will translate the position of a view.
  * @param view The target view to which the animated translation will apply.
  * This object will be retained until the animation is deallocated.

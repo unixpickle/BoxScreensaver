@@ -22,7 +22,9 @@
 	if ((self = [super init])) {
 		easy_a = -0.75;
 		easy_b = 1.5;
-		easy_k = theDestination / ((easy_a * pow(theDuration, 2)) + (easy_b * theDuration));
+		CGFloat baseK = 1.0 / ((easy_a * pow(1, 2)) + (easy_b * 1));
+		easy_k = theDestination * baseK;
+		// easy_k = theDestination / ((easy_a * pow(theDuration, 2)) + (easy_b * theDuration));
 		startDate = [[NSDate date] retain];
 		duration = theDuration;
 		destination = theDestination;
@@ -40,7 +42,7 @@
 		*value = destination;
 		return NO;
 	}
-	*value = easy_k * ((easy_a * pow(timeElapsed, 2)) + (easy_b * timeElapsed));
+	*value = easy_k * ((easy_a * pow(timeElapsed / duration, 2)) + (easy_b * (timeElapsed / duration)));
 	return YES;
 }
 

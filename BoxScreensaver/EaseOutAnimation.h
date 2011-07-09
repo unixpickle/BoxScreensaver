@@ -14,12 +14,12 @@
 	CGFloat destination;
 	NSDate * startDate;
 	// our easing function looks like this:
-	// F(t) = k(-0.2x^2 + 1.2x)
-	// This is the integral of our rate of change function:
-	// f(t) = -0.4x + 1.2
-	CGFloat easy_a; // -0.2
-	CGFloat easy_b; // 1.2
-	CGFloat easy_k; // depends on the duration and destination.
+	// F(t) = k(-0.75x^2 + 1.5x)
+	// This is the product of k and the integral of our rate of change function:
+	// f(t) = -1.5x + 1.5
+	CGFloat easy_a;
+	CGFloat easy_b;
+	CGFloat easy_k; // depends on the destination.
 }
 
 - (id)initWithDuration:(CGFloat)theDuration destinationValue:(CGFloat)theDestination;

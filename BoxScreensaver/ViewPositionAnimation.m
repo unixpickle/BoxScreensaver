@@ -38,6 +38,13 @@
 	return immutable;
 }
 
++ (void)cancelActiveAnimations {
+	NSMutableArray * global = [self globalAnimationList];
+	while ([global count] > 0) {
+		[[global lastObject] cancel];
+	}
+}
+
 - (id)init {
     if ((self = [super init])) {
         // Initialization code here.

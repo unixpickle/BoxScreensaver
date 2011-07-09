@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 #include "BoxDragstate.h"
+#import "CornerDropper.h"
+
+#define BoxMadePointNotification @"BoxMadePointNotification"
+#define BoxLostPointNotification @"BoxLostPointNotification"
 
 @class BoxRunway;
 

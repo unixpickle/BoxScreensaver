@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BoxRunway.h"
-#import "FruitBox.h"
-#import "VegetableBox.h"
+#import "SortGameViewController.h"
 
 @interface BoxScreensaverViewController : UIViewController {
-    BoxRunway * runway;
+	
 }
 
-- (void)addNewBox;
+/** 
+ * Presents the user with a vegetable/apple sorting game.
+ */
+- (void)showGame;
 
 @end

@@ -11,7 +11,6 @@
 @implementation BoxScreensaverViewController
 
 - (void)dealloc {
-	[runway release];
     [super dealloc];
 }
 
@@ -26,26 +25,20 @@
 
 - (void)loadView {
 	[super loadView];
-	runway = [[BoxRunway alloc] initWithFrame:CGRectMake([[self view] frame].size.width / 2 - 25, 0, 50, [[self view] frame].size.height)];
-	[[self view] addSubview:runway];
-	[self addNewBox];
-	[runway setBackgroundColor:[UIColor darkGrayColor]];
-	[runway release];
-}
-
-- (void)addNewBox {
-	if (arc4random() % 2 == 1) {
-		[runway pushNewBox:[runway generateBoxOfClass:[VegetableBox class]]];
-	} else {
-		[runway pushNewBox:[runway generateBoxOfClass:[FruitBox class]]];
-	}
-	[self performSelector:@selector(addNewBox) withObject:nil afterDelay:1.0];
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+- (void)showGame {
+	[self presentModalViewController:[[[SortGameViewController alloc] initWithNibName:nil bundle:nil] autorelease] animated:NO];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+	[self performSelector:@selector(showGame) withObject:nil afterDelay:0.1];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

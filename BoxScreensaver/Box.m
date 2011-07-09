@@ -66,9 +66,35 @@
 	CGPoint touchPoint = [[touches anyObject] locationInView:[self superview]];
 	CGPoint offset = CGPointMake(touchPoint.x - dragState.startTouchPoint.x, touchPoint.y - dragState.startTouchPoint.y);
 	CGRect newFrame = dragState.startFrame;
-	newFrame.origin.x += offset.x;
-	newFrame.origin.y += offset.y;
+	newFrame.origin.x += round(offset.x);
+	newFrame.origin.y += round(offset.y);
 	[self setFrame:newFrame];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+	if (runway) return;
+	BOOL point = NO;
+	for (UIView * view in [[self superview] subviews]) {
+		if ([view isKindOfClass:[CornerDropper class]] && view != self) {
+			if (CGRectIntersectsRect([self frame], [view frame])) {
+				if ([(CornerDropper *)view acceptDrop:self]) {
+					// we have a winner
+					NSLog(@"Point!");
+					point = YES;
+				}
+			}
+		}
+	}
+	if (point) {
+		[[NSNotificationCenter defaultCenter] postNotificationName:BoxMadePointNotification object:self];
+	} else {
+		[[NSNotificationCenter defaultCenter] postNotificationName:BoxLostPointNotification object:self];
+	}
+	[UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDuration:0.5];
+	[self setAlpha:0];
+	[UIView commitAnimations];
+	[self performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:0.6];
 }
 
 - (void)moveBackToParentsSuper {
