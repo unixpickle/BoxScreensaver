@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Box.h"
+#import "ViewPositionAnimation.h"
 
 @interface BoxRunway : UIView {
 	NSMutableArray * boxStack;
@@ -22,8 +23,27 @@
 - (Box *)generateBox;
 
 /**
+ * Creates a box of a specified class.  This can be used for concrete subclasses
+ * of Box.
+ * @param theClass The class that will be used while creating the new Box.
+ * @return A box of class @param theClass.
+ */
+- (Box *)generateBoxOfClass:(Class)c;
+
+/**
  * Adds a box to the bottom.
  */
 - (void)pushNewBox:(Box *)box;
+
+/**
+ * Gets the first and therefore movable box on the runway.
+ */
+- (Box *)topBox;
+
+/**
+ * Removes a box from the runways stack, therefore stopping it
+ * from animating.
+ */
+- (void)removeBox:(Box *)theBox;
 
 @end

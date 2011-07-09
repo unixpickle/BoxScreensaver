@@ -18,6 +18,14 @@
 		FA69347A13C78E3C002AEF34 /* BoxScreensaverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA69347813C78E3C002AEF34 /* BoxScreensaverViewController.xib */; };
 		FA69348213C78EAB002AEF34 /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69348113C78EAB002AEF34 /* Box.m */; };
 		FA69348513C78EEE002AEF34 /* BoxRunway.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69348413C78EEE002AEF34 /* BoxRunway.m */; };
+		FA69349C13C8A04C002AEF34 /* FruitBox.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69349B13C8A04C002AEF34 /* FruitBox.m */; };
+		FA69349F13C8A13D002AEF34 /* VegetableBox.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69349E13C8A13D002AEF34 /* VegetableBox.m */; };
+		FA6934A213C8A348002AEF34 /* apple_large.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6934A113C8A348002AEF34 /* apple_large.png */; };
+		FA6934A413C8A45E002AEF34 /* broccoli_large.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6934A313C8A45E002AEF34 /* broccoli_large.png */; };
+		FA6934A713C8A77E002AEF34 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6934A613C8A77E002AEF34 /* QuartzCore.framework */; };
+		FA6934B113C8C353002AEF34 /* EasingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6934B013C8C353002AEF34 /* EasingAnimation.m */; };
+		FA6934B413C8C3F6002AEF34 /* EaseOutAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6934B313C8C3F6002AEF34 /* EaseOutAnimation.m */; };
+		FA6934B713C8C735002AEF34 /* ViewPositionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6934B613C8C735002AEF34 /* ViewPositionAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +47,20 @@
 		FA69348113C78EAB002AEF34 /* Box.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
 		FA69348313C78EEE002AEF34 /* BoxRunway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxRunway.h; sourceTree = "<group>"; };
 		FA69348413C78EEE002AEF34 /* BoxRunway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxRunway.m; sourceTree = "<group>"; };
+		FA69349A13C8A04C002AEF34 /* FruitBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FruitBox.h; sourceTree = "<group>"; };
+		FA69349B13C8A04C002AEF34 /* FruitBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FruitBox.m; sourceTree = "<group>"; };
+		FA69349D13C8A13D002AEF34 /* VegetableBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VegetableBox.h; sourceTree = "<group>"; };
+		FA69349E13C8A13D002AEF34 /* VegetableBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VegetableBox.m; sourceTree = "<group>"; };
+		FA6934A113C8A348002AEF34 /* apple_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple_large.png; sourceTree = "<group>"; };
+		FA6934A313C8A45E002AEF34 /* broccoli_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = broccoli_large.png; sourceTree = "<group>"; };
+		FA6934A513C8A6B2002AEF34 /* BoxDragstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxDragstate.h; sourceTree = "<group>"; };
+		FA6934A613C8A77E002AEF34 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FA6934AF13C8C353002AEF34 /* EasingAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasingAnimation.h; sourceTree = "<group>"; };
+		FA6934B013C8C353002AEF34 /* EasingAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasingAnimation.m; sourceTree = "<group>"; };
+		FA6934B213C8C3F6002AEF34 /* EaseOutAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseOutAnimation.h; sourceTree = "<group>"; };
+		FA6934B313C8C3F6002AEF34 /* EaseOutAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseOutAnimation.m; sourceTree = "<group>"; };
+		FA6934B513C8C734002AEF34 /* ViewPositionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPositionAnimation.h; sourceTree = "<group>"; };
+		FA6934B613C8C735002AEF34 /* ViewPositionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPositionAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6934A713C8A77E002AEF34 /* QuartzCore.framework in Frameworks */,
 				FA69346113C78E3C002AEF34 /* UIKit.framework in Frameworks */,
 				FA69346313C78E3C002AEF34 /* Foundation.framework in Frameworks */,
 				FA69346513C78E3C002AEF34 /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +98,7 @@
 		FA69345F13C78E3C002AEF34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA6934A613C8A77E002AEF34 /* QuartzCore.framework */,
 				FA69346013C78E3C002AEF34 /* UIKit.framework */,
 				FA69346213C78E3C002AEF34 /* Foundation.framework */,
 				FA69346413C78E3C002AEF34 /* CoreGraphics.framework */,
@@ -85,6 +109,7 @@
 		FA69346613C78E3C002AEF34 /* BoxScreensaver */ = {
 			isa = PBXGroup;
 			children = (
+				FA69349913C8A03B002AEF34 /* Food */,
 				FA69348613C793DB002AEF34 /* Runway */,
 				FA69346F13C78E3C002AEF34 /* BoxScreensaverAppDelegate.h */,
 				FA69347013C78E3C002AEF34 /* BoxScreensaverAppDelegate.m */,
@@ -98,6 +123,7 @@
 		FA69346713C78E3C002AEF34 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA6934A013C8A33E002AEF34 /* Images */,
 				FA69347213C78E3C002AEF34 /* MainWindow.xib */,
 				FA69347813C78E3C002AEF34 /* BoxScreensaverViewController.xib */,
 				FA69346813C78E3C002AEF34 /* BoxScreensaver-Info.plist */,
@@ -111,12 +137,47 @@
 		FA69348613C793DB002AEF34 /* Runway */ = {
 			isa = PBXGroup;
 			children = (
+				FA6934AE13C8C342002AEF34 /* Animations */,
 				FA69348013C78EAB002AEF34 /* Box.h */,
 				FA69348113C78EAB002AEF34 /* Box.m */,
 				FA69348313C78EEE002AEF34 /* BoxRunway.h */,
 				FA69348413C78EEE002AEF34 /* BoxRunway.m */,
+				FA6934A513C8A6B2002AEF34 /* BoxDragstate.h */,
 			);
 			name = Runway;
+			sourceTree = "<group>";
+		};
+		FA69349913C8A03B002AEF34 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				FA69349A13C8A04C002AEF34 /* FruitBox.h */,
+				FA69349B13C8A04C002AEF34 /* FruitBox.m */,
+				FA69349D13C8A13D002AEF34 /* VegetableBox.h */,
+				FA69349E13C8A13D002AEF34 /* VegetableBox.m */,
+			);
+			name = Food;
+			sourceTree = "<group>";
+		};
+		FA6934A013C8A33E002AEF34 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FA6934A313C8A45E002AEF34 /* broccoli_large.png */,
+				FA6934A113C8A348002AEF34 /* apple_large.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		FA6934AE13C8C342002AEF34 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				FA6934AF13C8C353002AEF34 /* EasingAnimation.h */,
+				FA6934B013C8C353002AEF34 /* EasingAnimation.m */,
+				FA6934B213C8C3F6002AEF34 /* EaseOutAnimation.h */,
+				FA6934B313C8C3F6002AEF34 /* EaseOutAnimation.m */,
+				FA6934B513C8C734002AEF34 /* ViewPositionAnimation.h */,
+				FA6934B613C8C735002AEF34 /* ViewPositionAnimation.m */,
+			);
+			name = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +230,8 @@
 				FA69346B13C78E3C002AEF34 /* InfoPlist.strings in Resources */,
 				FA69347413C78E3C002AEF34 /* MainWindow.xib in Resources */,
 				FA69347A13C78E3C002AEF34 /* BoxScreensaverViewController.xib in Resources */,
+				FA6934A213C8A348002AEF34 /* apple_large.png in Resources */,
+				FA6934A413C8A45E002AEF34 /* broccoli_large.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +247,11 @@
 				FA69347713C78E3C002AEF34 /* BoxScreensaverViewController.m in Sources */,
 				FA69348213C78EAB002AEF34 /* Box.m in Sources */,
 				FA69348513C78EEE002AEF34 /* BoxRunway.m in Sources */,
+				FA69349C13C8A04C002AEF34 /* FruitBox.m in Sources */,
+				FA69349F13C8A13D002AEF34 /* VegetableBox.m in Sources */,
+				FA6934B113C8C353002AEF34 /* EasingAnimation.m in Sources */,
+				FA6934B413C8C3F6002AEF34 /* EaseOutAnimation.m in Sources */,
+				FA6934B713C8C735002AEF34 /* ViewPositionAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

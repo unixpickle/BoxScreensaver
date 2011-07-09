@@ -29,10 +29,16 @@
 	runway = [[BoxRunway alloc] initWithFrame:CGRectMake([[self view] frame].size.width / 2 - 25, 0, 50, [[self view] frame].size.height)];
 	[[self view] addSubview:runway];
 	[self addNewBox];
+	[runway setBackgroundColor:[UIColor darkGrayColor]];
+	[runway release];
 }
 
 - (void)addNewBox {
-	[runway pushNewBox:[runway generateBox]];
+	if (arc4random() % 2 == 1) {
+		[runway pushNewBox:[runway generateBoxOfClass:[VegetableBox class]]];
+	} else {
+		[runway pushNewBox:[runway generateBoxOfClass:[FruitBox class]]];
+	}
 	[self performSelector:@selector(addNewBox) withObject:nil afterDelay:1.0];
 }
 

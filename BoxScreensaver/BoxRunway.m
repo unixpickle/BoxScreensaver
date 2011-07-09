@@ -27,60 +27,73 @@
 }
 
 - (Box *)generateBox {
-	minY = 10;
-	maxY = [self frame].size.height - 10;
-	CGFloat nextY = minY;
-	if ([boxStack count] > 0) {
-		Box * b = [boxStack lastObject];
-		nextY = [b frame].size.height + [b frame].origin.y + minY;
-	}
-	Box * newBox = [[Box alloc] initWithFrame:CGRectMake(0, nextY, [self frame].size.width, [self frame].size.width)];
+	Box * newBox = [self generateBoxOfClass:[Box class]];
 	[newBox setStartDirection:startDirection];
 	// toggle start direction
 	startDirection = (startDirection == IncomingDirectionLeft ? IncomingDirectionRight : IncomingDirectionLeft);
+	return newBox;
+}
+
+- (Box *)generateBoxOfClass:(Class)c {
+	minY = 10;
+	maxY = [self frame].size.height - 10;
+	CGFloat nextY = maxY - [self frame].size.width;
+	Box * newBox = [[c alloc] initWithFrame:CGRectMake(0, nextY, [self frame].size.width, [self frame].size.width)];
+	NSAssert([newBox isKindOfClass:[Box class]], @"Invalid class was provided.");
+	[newBox setRunway:self];
 	return [newBox autorelease];
 }
 
 - (void)pushNewBox:(Box *)box {
 	if (!boxStack) {
 		boxStack = [[NSMutableArray alloc] init];
-		NSAssert(minY != 0, @"-generateBox must be called before pushing a box.");
+		NSAssert(minY != 0, @"At least one box must be generated before pushing a box.");
 	}
 	CGRect boxFrame = [box frame];
 	if ([box startDirection] == IncomingDirectionLeft) {
-		boxFrame.origin.x = ([[self superview] frame].size.width - [self frame].origin.x);
+		boxFrame.origin.x = ([[self superview] frame].size.width);
 	} else {
-		boxFrame.origin.x = -([self frame].origin.x) - boxFrame.size.width;
+		boxFrame.origin.x = -(boxFrame.size.width);
 	}
-	if (boxFrame.size.height + boxFrame.origin.y > maxY) {
-		CGFloat moveUp = ([box frame].size.height + [box frame].origin.y) - maxY;
-		// move all of the boxes up, including our new box.
-		[UIView beginAnimations:nil context:NULL];
-		[UIView setAnimationDuration:0.75];
-		for (int i = 0; i < [boxStack count]; i++) {
-			Box * b = [boxStack objectAtIndex:i];
-			// translate the frame to move up.
-			CGRect br = [b frame];
-			if (br.origin.y < 0 - br.size.height) {
-				// remove views that go over the top.
-				[boxStack removeObjectAtIndex:i];
-				i--;
-			} else {
-				br.origin.y -= moveUp;
-				[b setFrame:br];
-			}
+	CGFloat moveUp = [box frame].size.height + 10;
+	// move all of the boxes up, including our new box.
+	for (int i = 0; i < [boxStack count]; i++) {
+		Box * b = [boxStack objectAtIndex:i];
+		// translate the frame to move up.
+		CGRect br = [b frame];
+		if (br.origin.y < 0 - br.size.height) {
+			// remove views that go over the top.
+			[boxStack removeObjectAtIndex:i];
+			i--;
+		} else {
+			br.origin.y -= moveUp;
+			// create view animation
+			CGPoint destination = CGPointMake(br.origin.x, br.origin.y);
+			ViewPositionAnimation * animation = [[ViewPositionAnimation alloc] initWithView:b destinationLocation:destination];
+			[animation start:0.75];
+			[animation release];
 		}
-		[UIView commitAnimations];
-		boxFrame.origin.y = boxFrame.origin.y - moveUp;
 	}
 	[box setFrame:boxFrame];
-	[self addSubview:box];
-	boxFrame.origin.x = 0;
-	[UIView beginAnimations:nil context:NULL];
-	[UIView setAnimationDuration:1];
-	[box setFrame:boxFrame];
-	[UIView commitAnimations];
+	[[self superview] addSubview:box];
+	CGPoint destinationBox = CGPointMake([self frame].origin.x, boxFrame.origin.y);
+	ViewPositionAnimation * boxAnimation = [[ViewPositionAnimation alloc] initWithView:box destinationLocation:destinationBox];
+	[boxAnimation start:1];
+	[boxAnimation release];
 	[boxStack addObject:box];
+}
+
+- (Box *)topBox {
+	if ([boxStack count] == 0) return nil;
+	return [boxStack objectAtIndex:0]; // will always be first.
+}
+
+- (void)removeBox:(Box *)theBox {
+	NSArray * boxAnimations = [ViewPositionAnimation activeAnimationsForView:theBox];
+	for (ViewPositionAnimation * animation in boxAnimations) {
+		[animation cancel];
+	}
+	[boxStack removeObject:theBox];
 }
 
 - (void)dealloc {

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BoxRunway.h"
+#import "FruitBox.h"
+#import "VegetableBox.h"
 
 @interface BoxScreensaverViewController : UIViewController {
     BoxRunway * runway;

@@ -7,6 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#include "BoxDragstate.h"
+
+@class BoxRunway;
 
 typedef enum {
 	IncomingDirectionLeft, // starts on far right
@@ -15,8 +19,11 @@ typedef enum {
 
 @interface Box : UIView {
     IncomingDirection startDirection;
+	BoxRunway * runway;
+	struct Dragstate dragState;
 }
 
 @property (readwrite) IncomingDirection startDirection;
+@property (nonatomic, assign) BoxRunway * runway;
 
 @end
