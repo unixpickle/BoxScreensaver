@@ -22,6 +22,7 @@
 	UILabel * pointsLabel;
 	UILabel * lossesLabel;
 	CGFloat duration;
+	BOOL isGameGoing;
 }
 
 /**

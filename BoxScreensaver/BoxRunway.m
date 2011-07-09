@@ -99,13 +99,13 @@
 }
 
 - (void)removeFromSuperview {
-	[super removeFromSuperview];
 	[ViewPositionAnimation cancelActiveAnimations];
 	for (UIView * v in boxStack) {
 		[v removeFromSuperview];
 	}
 	[boxStack release];
 	boxStack = nil;
+	[super removeFromSuperview];
 }
 
 - (void)dealloc {

@@ -90,6 +90,10 @@
 	} else {
 		[[NSNotificationCenter defaultCenter] postNotificationName:BoxLostPointNotification object:self];
 	}
+	//[[self retain] autorelease];
+	//if (![self superview]) {
+	//	return;
+	//}
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:0.5];
 	[self setAlpha:0];
@@ -113,7 +117,6 @@
 	dragState.startTouchPoint.x += superFrame.origin.x;
 	dragState.startTouchPoint.y += superFrame.origin.y;
 }
-
 - (void)dealloc {
     [super dealloc];
 }

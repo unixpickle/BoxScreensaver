@@ -25,6 +25,7 @@
 
 - (void)loadView {
 	[super loadView];
+	[self performSelector:@selector(showGame) withObject:nil afterDelay:0.1];
 }
 
 - (void)viewDidUnload {
@@ -35,10 +36,6 @@
 
 - (void)showGame {
 	[self presentModalViewController:[[[SortGameViewController alloc] initWithNibName:nil bundle:nil] autorelease] animated:NO];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-	[self performSelector:@selector(showGame) withObject:nil afterDelay:0.1];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

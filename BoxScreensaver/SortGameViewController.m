@@ -39,6 +39,7 @@
 - (void)loadView {
 	[super loadView];
 	duration = 1.5;
+	isGameGoing = YES;
 	[[self view] setBackgroundColor:[UIColor colorWithWhite:0.8 alpha:1]];
 	runway = [[BoxRunway alloc] initWithFrame:CGRectMake([[self view] frame].size.width / 2 - 25, 0, 50, [[self view] frame].size.height)];
 	vegetables = [[CornerDropper alloc] initWithFrame:CGRectMake(0, 0, 130, 130)];
@@ -74,6 +75,7 @@
 
 
 - (void)nextItem {
+	if (!isGameGoing) return;
 	duration *= 0.97;
 	if (arc4random() % 2 == 1) {
 		[runway pushNewBox:[runway generateBoxOfClass:[VegetableBox class]] duration:duration];
@@ -93,6 +95,8 @@
 	gameScore.losses += 1;
 	[lossesLabel setText:[NSString stringWithFormat:@"Mistakes: %d", gameScore.losses]];
 	if (gameScore.losses == 3) {
+		[ViewPositionAnimation cancelActiveAnimations];
+		isGameGoing = NO;
 		[gameTimer invalidate];
 		gameTimer = nil;
 		[[self parentViewController] dismissModalViewControllerAnimated:YES];
@@ -100,7 +104,7 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-	[runway removeFromSuperview];
+	
 }
 
 - (void)viewDidUnload {
