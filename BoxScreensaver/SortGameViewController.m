@@ -8,6 +8,13 @@
 
 #import "SortGameViewController.h"
 
+@interface SortGameViewController (Private)
+
+/* Methods called by notifications */
+- (void)pointScoredNotification;
+- (void)lifeLostNotification;
+
+@end
 
 @implementation SortGameViewController
 
@@ -65,26 +72,38 @@
 	[[self view] addSubview:vegetables];
 	[[self view] addSubview:lossesLabel];
 	[[self view] addSubview:pointsLabel];
-	gameTimer = [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(nextItem) userInfo:nil repeats:NO];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pointScoredNotification) name:BoxMadePointNotification object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(lifeLostNotification) name:BoxLostPointNotification object:nil];
 	gameScore.points = 0;
 	gameScore.losses = 0;
+	[self nextItem];
 }
-
 
 - (void)nextItem {
 	if (!isGameGoing) return;
-	duration *= 0.97;
+	duration *= 0.985;
+	if (duration < 0.8) duration = 0.8;
 	if (arc4random() % 2 == 1) {
 		[runway pushNewBox:[runway generateBoxOfClass:[VegetableBox class]] duration:duration];
 	} else {
 		[runway pushNewBox:[runway generateBoxOfClass:[FruitBox class]] duration:duration];
 	}
-	[gameTimer invalidate];
-	gameTimer = [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(nextItem) userInfo:nil repeats:NO];
+	[self performSelector:@selector(nextItem) withObject:nil afterDelay:duration];
 }
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark Notifications
 
 - (void)pointScoredNotification {
 	gameScore.points += 1;
@@ -97,25 +116,8 @@
 	if (gameScore.losses == 3) {
 		[ViewPositionAnimation cancelActiveAnimations];
 		isGameGoing = NO;
-		[gameTimer invalidate];
-		gameTimer = nil;
 		[[self parentViewController] dismissModalViewControllerAnimated:YES];
 	}
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-	
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end

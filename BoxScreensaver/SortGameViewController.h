@@ -15,7 +15,6 @@
 
 @interface SortGameViewController : UIViewController {
     BoxRunway * runway;
-	NSTimer * gameTimer;
 	CornerDropper * vegetables;
 	CornerDropper * fruits;
 	struct GameScore gameScore;
@@ -29,8 +28,5 @@
  * Pushes the next food to our runway.
  */
 - (void)nextItem;
-
-- (void)pointScoredNotification;
-- (void)lifeLostNotification;
 
 @end
