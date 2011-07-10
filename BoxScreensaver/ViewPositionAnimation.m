@@ -45,6 +45,17 @@
 	}
 }
 
++ (void)cancelAnimationsForView:(UIView *)view {
+	NSMutableArray * global = [self globalAnimationList];
+	for (int i = 0; i < [global count]; i++) {
+		ViewPositionAnimation * animation = [global objectAtIndex:i];
+		if ([animation targetView] == view || view == nil) {
+			[animation cancel];
+			i--;
+		}
+	}
+}
+
 - (id)init {
     if ((self = [super init])) {
         // Initialization code here.
@@ -65,10 +76,10 @@
 	if (![global containsObject:self]) [global addObject:self];
 	start = [targetView frame].origin;
 	if (destination.x != start.x) {
-		animationX = [[EaseOutAnimation alloc] initWithDuration:duration destinationValue:(destination.x - start.x)];
+		animationX = [[EaseOutSmoothAnimation alloc] initWithDuration:duration destinationValue:(destination.x - start.x)];
 	}
 	if (destination.y != start.y) {
-		animationY = [[EaseOutAnimation alloc] initWithDuration:duration destinationValue:(destination.y - start.y)];
+		animationY = [[EaseOutSmoothAnimation alloc] initWithDuration:duration destinationValue:(destination.y - start.y)];
 	}
 	// create a timer at 24FPS
 	[t invalidate];

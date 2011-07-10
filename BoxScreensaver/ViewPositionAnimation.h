@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EaseOutAnimation.h"
+#import "EaseOutSmoothAnimation.h"
 
 /**
  * An animation that runs in the background to translate the origin
@@ -34,6 +34,11 @@
  * Cancels all animations on ALL views!
  */
 + (void)cancelActiveAnimations;
+
+/**
+ * Cancels all animations for a specified view.
+ */
++ (void)cancelAnimationsForView:(UIView *)view;
 
 /**
  * Create an eased animation that will translate the position of a view.

@@ -11,6 +11,8 @@
 @implementation BoxScreensaverViewController
 
 - (void)dealloc {
+	[menuBacking release];
+	[newGameButton release];
     [super dealloc];
 }
 
@@ -25,7 +27,15 @@
 
 - (void)loadView {
 	[super loadView];
-	[self performSelector:@selector(showGame) withObject:nil afterDelay:0.1];
+	[[self view] setBackgroundColor:[UIColor colorWithWhite:0.2 alpha:1]];
+	menuBacking = [[MenuBackground alloc] initWithFrame:[[self view] bounds]];
+	newGameButton = [[UIButton alloc] initWithFrame:CGRectMake(10, [[self view] frame].size.height / 2 - 38, 300, 75)];
+	[newGameButton setBackgroundImage:[UIImage imageNamed:@"newgame_regular.png"] forState:UIControlStateNormal];
+	[newGameButton setBackgroundImage:[UIImage imageNamed:@"newgame_press.png"] forState:UIControlStateHighlighted];
+	[newGameButton addTarget:self action:@selector(showGame) forControlEvents:UIControlEventTouchUpInside];
+	[[self view] addSubview:newGameButton];
+	[[self view] addSubview:menuBacking];
+	[[self view] sendSubviewToBack:menuBacking];
 }
 
 - (void)viewDidUnload {

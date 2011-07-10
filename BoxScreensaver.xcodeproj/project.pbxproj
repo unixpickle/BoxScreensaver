@@ -11,6 +11,7 @@
 		FA15D01913C8F84500E2CEB6 /* drop broccoli.png in Resources */ = {isa = PBXBuildFile; fileRef = FA15D01713C8F84500E2CEB6 /* drop broccoli.png */; };
 		FA15D01C13C8F85D00E2CEB6 /* CornerDropper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA15D01B13C8F85D00E2CEB6 /* CornerDropper.m */; };
 		FA15D01F13C8F91000E2CEB6 /* SortGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA15D01E13C8F91000E2CEB6 /* SortGameViewController.m */; };
+		FA15D02313C91D3900E2CEB6 /* MenuBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = FA15D02213C91D3900E2CEB6 /* MenuBackground.m */; };
 		FA69346113C78E3C002AEF34 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA69346013C78E3C002AEF34 /* UIKit.framework */; };
 		FA69346313C78E3C002AEF34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA69346213C78E3C002AEF34 /* Foundation.framework */; };
 		FA69346513C78E3C002AEF34 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA69346413C78E3C002AEF34 /* CoreGraphics.framework */; };
@@ -30,6 +31,9 @@
 		FA6934B113C8C353002AEF34 /* EasingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6934B013C8C353002AEF34 /* EasingAnimation.m */; };
 		FA6934B413C8C3F6002AEF34 /* EaseOutAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6934B313C8C3F6002AEF34 /* EaseOutAnimation.m */; };
 		FA6934B713C8C735002AEF34 /* ViewPositionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6934B613C8C735002AEF34 /* ViewPositionAnimation.m */; };
+		FA7A9EBC13C9F8030007C021 /* EaseOutSmoothAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7A9EBB13C9F8030007C021 /* EaseOutSmoothAnimation.m */; };
+		FA7A9EC213CA02DD0007C021 /* newgame_press.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9EC113CA02DD0007C021 /* newgame_press.png */; };
+		FA7A9EC413CA030A0007C021 /* newgame_regular.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9EC313CA030A0007C021 /* newgame_regular.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,8 @@
 		FA15D01D13C8F91000E2CEB6 /* SortGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortGameViewController.h; sourceTree = "<group>"; };
 		FA15D01E13C8F91000E2CEB6 /* SortGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortGameViewController.m; sourceTree = "<group>"; };
 		FA15D02013C8FE9A00E2CEB6 /* GameScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScore.h; sourceTree = "<group>"; };
+		FA15D02113C91D3900E2CEB6 /* MenuBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuBackground.h; sourceTree = "<group>"; };
+		FA15D02213C91D3900E2CEB6 /* MenuBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuBackground.m; sourceTree = "<group>"; };
 		FA69345C13C78E3C002AEF34 /* BoxScreensaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoxScreensaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA69346013C78E3C002AEF34 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FA69346213C78E3C002AEF34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,6 +78,10 @@
 		FA6934B313C8C3F6002AEF34 /* EaseOutAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseOutAnimation.m; sourceTree = "<group>"; };
 		FA6934B513C8C734002AEF34 /* ViewPositionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPositionAnimation.h; sourceTree = "<group>"; };
 		FA6934B613C8C735002AEF34 /* ViewPositionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPositionAnimation.m; sourceTree = "<group>"; };
+		FA7A9EBA13C9F8030007C021 /* EaseOutSmoothAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; path = EaseOutSmoothAnimation.h; sourceTree = "<group>"; };
+		FA7A9EBB13C9F8030007C021 /* EaseOutSmoothAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseOutSmoothAnimation.m; sourceTree = "<group>"; };
+		FA7A9EC113CA02DD0007C021 /* newgame_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newgame_press.png; sourceTree = "<group>"; };
+		FA7A9EC313CA030A0007C021 /* newgame_regular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newgame_regular.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,15 @@
 				FA15D01713C8F84500E2CEB6 /* drop broccoli.png */,
 			);
 			name = Corners;
+			sourceTree = "<group>";
+		};
+		FA15D06613C924FC00E2CEB6 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				FA7A9EC313CA030A0007C021 /* newgame_regular.png */,
+				FA7A9EC113CA02DD0007C021 /* newgame_press.png */,
+			);
+			name = Buttons;
 			sourceTree = "<group>";
 		};
 		FA69345113C78E3C002AEF34 = {
@@ -148,6 +167,8 @@
 				FA15D01D13C8F91000E2CEB6 /* SortGameViewController.h */,
 				FA15D01E13C8F91000E2CEB6 /* SortGameViewController.m */,
 				FA15D02013C8FE9A00E2CEB6 /* GameScore.h */,
+				FA15D02113C91D3900E2CEB6 /* MenuBackground.h */,
+				FA15D02213C91D3900E2CEB6 /* MenuBackground.m */,
 				FA69346713C78E3C002AEF34 /* Supporting Files */,
 			);
 			path = BoxScreensaver;
@@ -194,6 +215,7 @@
 		FA6934A013C8A33E002AEF34 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FA15D06613C924FC00E2CEB6 /* Buttons */,
 				FA15D01513C8F83700E2CEB6 /* Corners */,
 				FA6934A313C8A45E002AEF34 /* broccoli_large.png */,
 				FA6934A113C8A348002AEF34 /* apple_large.png */,
@@ -208,6 +230,8 @@
 				FA6934B013C8C353002AEF34 /* EasingAnimation.m */,
 				FA6934B213C8C3F6002AEF34 /* EaseOutAnimation.h */,
 				FA6934B313C8C3F6002AEF34 /* EaseOutAnimation.m */,
+				FA7A9EBA13C9F8030007C021 /* EaseOutSmoothAnimation.h */,
+				FA7A9EBB13C9F8030007C021 /* EaseOutSmoothAnimation.m */,
 				FA6934B513C8C734002AEF34 /* ViewPositionAnimation.h */,
 				FA6934B613C8C735002AEF34 /* ViewPositionAnimation.m */,
 			);
@@ -268,6 +292,8 @@
 				FA6934A413C8A45E002AEF34 /* broccoli_large.png in Resources */,
 				FA15D01813C8F84500E2CEB6 /* drop apple.png in Resources */,
 				FA15D01913C8F84500E2CEB6 /* drop broccoli.png in Resources */,
+				FA7A9EC213CA02DD0007C021 /* newgame_press.png in Resources */,
+				FA7A9EC413CA030A0007C021 /* newgame_regular.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +316,8 @@
 				FA6934B713C8C735002AEF34 /* ViewPositionAnimation.m in Sources */,
 				FA15D01C13C8F85D00E2CEB6 /* CornerDropper.m in Sources */,
 				FA15D01F13C8F91000E2CEB6 /* SortGameViewController.m in Sources */,
+				FA15D02313C91D3900E2CEB6 /* MenuBackground.m in Sources */,
+				FA7A9EBC13C9F8030007C021 /* EaseOutSmoothAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

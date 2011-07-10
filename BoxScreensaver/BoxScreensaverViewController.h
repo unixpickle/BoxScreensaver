@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SortGameViewController.h"
+#import "MenuBackground.h"
 
 @interface BoxScreensaverViewController : UIViewController {
-	
+	MenuBackground * menuBacking;
+	UIButton * newGameButton;
 }
 
 /** 

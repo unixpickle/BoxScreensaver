@@ -25,9 +25,11 @@ typedef enum {
     IncomingDirection startDirection;
 	BoxRunway * runway;
 	struct Dragstate dragState;
+	BOOL isDraggable;
 }
 
 @property (readwrite) IncomingDirection startDirection;
 @property (nonatomic, assign) BoxRunway * runway;
+@property (readwrite, setter=setDraggable:) BOOL isDraggable;
 
 @end

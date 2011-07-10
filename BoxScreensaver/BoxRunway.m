@@ -63,7 +63,7 @@
 		CGRect br = [b frame];
 		if (br.origin.y < 0 - br.size.height) {
 			// remove views that go over the top.
-			[[NSNotificationCenter defaultCenter] postNotificationName:BoxLostPointNotification object:b];
+			if ([b isDraggable]) [[NSNotificationCenter defaultCenter] postNotificationName:BoxLostPointNotification object:b];
 			[boxStack removeObjectAtIndex:i];
 			[b removeFromSuperview];
 			i--;
@@ -91,16 +91,13 @@
 }
 
 - (void)removeBox:(Box *)theBox {
-	NSArray * boxAnimations = [ViewPositionAnimation activeAnimationsForView:theBox];
-	for (ViewPositionAnimation * animation in boxAnimations) {
-		[animation cancel];
-	}
+	[ViewPositionAnimation cancelAnimationsForView:theBox];
 	[boxStack removeObject:theBox];
 }
 
 - (void)removeFromSuperview {
-	[ViewPositionAnimation cancelActiveAnimations];
 	for (UIView * v in boxStack) {
+		[ViewPositionAnimation cancelAnimationsForView:v];
 		[v removeFromSuperview];
 	}
 	[boxStack release];

@@ -114,7 +114,6 @@
 	gameScore.losses += 1;
 	[lossesLabel setText:[NSString stringWithFormat:@"Mistakes: %d", gameScore.losses]];
 	if (gameScore.losses == 3) {
-		[ViewPositionAnimation cancelActiveAnimations];
 		isGameGoing = NO;
 		[[self parentViewController] dismissModalViewControllerAnimated:YES];
 	}

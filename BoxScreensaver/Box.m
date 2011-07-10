@@ -13,6 +13,7 @@
 
 @synthesize startDirection;
 @synthesize runway;
+@synthesize isDraggable;
 
 - (id)init {
     if ((self = [super init])) {
@@ -23,6 +24,7 @@
 
 - (id)initWithFrame:(CGRect)frame {
 	if ((self = [super initWithFrame:frame])) {
+		isDraggable = YES;
 		[self setBackgroundColor:[UIColor clearColor]];
 	}
 	return self;
@@ -30,21 +32,17 @@
 
 - (void)drawRect:(CGRect)rect {
 	[super drawRect:rect];
-	CGContextRef ctx = UIGraphicsGetCurrentContext();
-	CGContextSetRGBFillColor(ctx, 1, 1, 0.2, 1);
-	CGContextFillRect(ctx, [self bounds]);
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+	if (![self isDraggable]) return;
 	dragState.startFrame = [self frame];
 	dragState.startTouchPoint = [[touches anyObject] locationInView:[self superview]];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-	// We may be moving away from the runway!
+	if (![self isDraggable]) return;
 	if (runway) {
-		// back when you could only take from the top.
-		// if ([runway topBox] != self) return;
 		[runway removeBox:self];
 		runway = nil;
 	}
@@ -59,22 +57,26 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+	if (![self isDraggable]) return;
 	if (runway) return;
 	BOOL point = NO;
+	
+	// If we are inside the correct corner, they have a point.
+	// Otherwise they lost a point.
 	for (UIView * view in [[self superview] subviews]) {
-		if ([view isKindOfClass:[CornerDropper class]] && view != self) {
-			if (CGRectIntersectsRect([self frame], [view frame])) {
-				if ([(CornerDropper *)view acceptDrop:self]) {
-					point = YES;
-				}
+		if ([view isKindOfClass:[CornerDropper class]] && view != self && CGRectIntersectsRect([self frame], [view frame])) {
+			if ([(CornerDropper *)view acceptDrop:self]) {
+				point = YES;
 			}
 		}
 	}
-	if (point) {
-		[[NSNotificationCenter defaultCenter] postNotificationName:BoxMadePointNotification object:self];
-	} else {
-		[[NSNotificationCenter defaultCenter] postNotificationName:BoxLostPointNotification object:self];
+	
+	if (isDraggable) {
+		// if it is not draggable, it doesn't count that they did anything with it.
+		if (point) [[NSNotificationCenter defaultCenter] postNotificationName:BoxMadePointNotification object:self];
+		else [[NSNotificationCenter defaultCenter] postNotificationName:BoxLostPointNotification object:self];
 	}
+	
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:0.5];
 	[self setAlpha:0];
