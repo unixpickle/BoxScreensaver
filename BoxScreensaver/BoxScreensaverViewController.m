@@ -29,10 +29,14 @@
 	[super loadView];
 	[[self view] setBackgroundColor:[UIColor colorWithWhite:0.2 alpha:1]];
 	menuBacking = [[MenuBackground alloc] initWithFrame:[[self view] bounds]];
-	newGameButton = [[UIButton alloc] initWithFrame:CGRectMake(10, [[self view] frame].size.height / 2 - 38, 300, 75)];
-	[newGameButton setBackgroundImage:[UIImage imageNamed:@"newgame_regular.png"] forState:UIControlStateNormal];
-	[newGameButton setBackgroundImage:[UIImage imageNamed:@"newgame_press.png"] forState:UIControlStateHighlighted];
+	newGameButton = [[UIButton alloc] initWithFrame:CGRectMake(10, [[self view] frame].size.height / 2 - 50, 300, 100)];
+	[newGameButton setBackgroundImage:[UIImage imageNamed:@"button_regular.png"] forState:UIControlStateNormal];
+	[newGameButton setBackgroundImage:[UIImage imageNamed:@"button_press.png"] forState:UIControlStateHighlighted];
 	[newGameButton addTarget:self action:@selector(showGame) forControlEvents:UIControlEventTouchUpInside];
+	[newGameButton setTitle:@"Adventure Mode" forState:UIControlStateNormal];
+	[[newGameButton titleLabel] setFont:[UIFont boldSystemFontOfSize:30]];
+	[newGameButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+	[newGameButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
 	[[self view] addSubview:newGameButton];
 	[[self view] addSubview:menuBacking];
 	[[self view] sendSubviewToBack:menuBacking];
@@ -45,7 +49,9 @@
 }
 
 - (void)showGame {
-	[self presentModalViewController:[[[SortGameViewController alloc] initWithNibName:nil bundle:nil] autorelease] animated:NO];
+	AdventureViewController * avc = [[[AdventureViewController alloc] initWithNibName:nil bundle:nil] autorelease];
+	[self presentModalViewController:avc animated:YES];
+	[avc performSelector:@selector(nextAdventureStage) withObject:nil afterDelay:0.5];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

@@ -95,13 +95,19 @@
 	[boxStack removeObject:theBox];
 }
 
-- (void)removeFromSuperview {
+- (void)removeAllBoxes {
 	for (UIView * v in boxStack) {
 		[ViewPositionAnimation cancelAnimationsForView:v];
 		[v removeFromSuperview];
 	}
 	[boxStack release];
 	boxStack = nil;
+}
+
+#pragma mark Overriden
+
+- (void)removeFromSuperview {
+	[self removeAllBoxes];
 	[super removeFromSuperview];
 }
 

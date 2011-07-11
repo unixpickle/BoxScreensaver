@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SortGameViewController.h"
+#import "AdventureViewController.h"
 #import "MenuBackground.h"
 
 @interface BoxScreensaverViewController : UIViewController {

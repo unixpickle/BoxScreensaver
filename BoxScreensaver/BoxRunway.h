@@ -43,9 +43,14 @@
 - (Box *)topBox;
 
 /**
- * Removes a box from the runways stack, therefore stopping it
+ * Removes a box from the runway's stack, therefore stopping it
  * from animating.
  */
 - (void)removeBox:(Box *)theBox;
+
+/**
+ * Removes all boxes from the runway's stack.
+ */
+- (void)removeAllBoxes;
 
 @end

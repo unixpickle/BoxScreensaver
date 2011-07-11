@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA15D01813C8F84500E2CEB6 /* drop apple.png in Resources */ = {isa = PBXBuildFile; fileRef = FA15D01613C8F84500E2CEB6 /* drop apple.png */; };
-		FA15D01913C8F84500E2CEB6 /* drop broccoli.png in Resources */ = {isa = PBXBuildFile; fileRef = FA15D01713C8F84500E2CEB6 /* drop broccoli.png */; };
 		FA15D01C13C8F85D00E2CEB6 /* CornerDropper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA15D01B13C8F85D00E2CEB6 /* CornerDropper.m */; };
 		FA15D01F13C8F91000E2CEB6 /* SortGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA15D01E13C8F91000E2CEB6 /* SortGameViewController.m */; };
 		FA15D02313C91D3900E2CEB6 /* MenuBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = FA15D02213C91D3900E2CEB6 /* MenuBackground.m */; };
@@ -32,13 +30,26 @@
 		FA6934B413C8C3F6002AEF34 /* EaseOutAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6934B313C8C3F6002AEF34 /* EaseOutAnimation.m */; };
 		FA6934B713C8C735002AEF34 /* ViewPositionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6934B613C8C735002AEF34 /* ViewPositionAnimation.m */; };
 		FA7A9EBC13C9F8030007C021 /* EaseOutSmoothAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7A9EBB13C9F8030007C021 /* EaseOutSmoothAnimation.m */; };
-		FA7A9EC213CA02DD0007C021 /* newgame_press.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9EC113CA02DD0007C021 /* newgame_press.png */; };
-		FA7A9EC413CA030A0007C021 /* newgame_regular.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9EC313CA030A0007C021 /* newgame_regular.png */; };
+		FA7A9EC713CA05930007C021 /* AppleBroccoli.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9EC613CA05930007C021 /* AppleBroccoli.plist */; };
+		FA7A9ECB13CA06990007C021 /* GameLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7A9ECA13CA06990007C021 /* GameLevel.m */; };
+		FA7A9ECE13CA1C120007C021 /* drag_left.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9ECC13CA1C120007C021 /* drag_left.png */; };
+		FA7A9ECF13CA1C120007C021 /* drag_right.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9ECD13CA1C120007C021 /* drag_right.png */; };
+		FA7A9ED213CA371F0007C021 /* GenericImageBox.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7A9ED113CA371F0007C021 /* GenericImageBox.m */; };
+		FA7A9ED513CA379F0007C021 /* GenericLeftBox.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7A9ED413CA379F0007C021 /* GenericLeftBox.m */; };
+		FA7A9ED813CA37BC0007C021 /* GenericRightBox.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7A9ED713CA37BC0007C021 /* GenericRightBox.m */; };
+		FA7A9EE013CA46B30007C021 /* button_regular.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9EDE13CA46B30007C021 /* button_regular.png */; };
+		FA7A9EE213CA71210007C021 /* button_press.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9EE113CA71210007C021 /* button_press.png */; };
+		FA7A9EE613CA77150007C021 /* trash.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9EE413CA77150007C021 /* trash.png */; };
+		FA7A9EE713CA77150007C021 /* recycling.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9EE513CA77150007C021 /* recycling.png */; };
+		FA7A9EEB13CA773E0007C021 /* Levels.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9EEA13CA773E0007C021 /* Levels.plist */; };
+		FA7A9EED13CA79D50007C021 /* TrashRecycling.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9EEC13CA79D50007C021 /* TrashRecycling.plist */; };
+		FA7A9EF013CA7D420007C021 /* AdventureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7A9EEF13CA7D410007C021 /* AdventureViewController.m */; };
+		FA7A9EF413CA82300007C021 /* CountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7A9EF313CA82300007C021 /* CountdownView.m */; };
+		FA7A9EF713CA86D40007C021 /* AfterActionReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7A9EF613CA86D40007C021 /* AfterActionReportViewController.m */; };
+		FA7A9EF913CA93000007C021 /* belt.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9EF813CA92FF0007C021 /* belt.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FA15D01613C8F84500E2CEB6 /* drop apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drop apple.png"; sourceTree = "<group>"; };
-		FA15D01713C8F84500E2CEB6 /* drop broccoli.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drop broccoli.png"; sourceTree = "<group>"; };
 		FA15D01A13C8F85D00E2CEB6 /* CornerDropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CornerDropper.h; sourceTree = "<group>"; };
 		FA15D01B13C8F85D00E2CEB6 /* CornerDropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CornerDropper.m; sourceTree = "<group>"; };
 		FA15D01D13C8F91000E2CEB6 /* SortGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortGameViewController.h; sourceTree = "<group>"; };
@@ -78,10 +89,32 @@
 		FA6934B313C8C3F6002AEF34 /* EaseOutAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseOutAnimation.m; sourceTree = "<group>"; };
 		FA6934B513C8C734002AEF34 /* ViewPositionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPositionAnimation.h; sourceTree = "<group>"; };
 		FA6934B613C8C735002AEF34 /* ViewPositionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPositionAnimation.m; sourceTree = "<group>"; };
-		FA7A9EBA13C9F8030007C021 /* EaseOutSmoothAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; path = EaseOutSmoothAnimation.h; sourceTree = "<group>"; };
+		FA7A9EBA13C9F8030007C021 /* EaseOutSmoothAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseOutSmoothAnimation.h; sourceTree = "<group>"; };
 		FA7A9EBB13C9F8030007C021 /* EaseOutSmoothAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseOutSmoothAnimation.m; sourceTree = "<group>"; };
-		FA7A9EC113CA02DD0007C021 /* newgame_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newgame_press.png; sourceTree = "<group>"; };
-		FA7A9EC313CA030A0007C021 /* newgame_regular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newgame_regular.png; sourceTree = "<group>"; };
+		FA7A9EC613CA05930007C021 /* AppleBroccoli.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppleBroccoli.plist; sourceTree = "<group>"; };
+		FA7A9EC913CA06990007C021 /* GameLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLevel.h; sourceTree = "<group>"; };
+		FA7A9ECA13CA06990007C021 /* GameLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLevel.m; sourceTree = "<group>"; };
+		FA7A9ECC13CA1C120007C021 /* drag_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drag_left.png; sourceTree = "<group>"; };
+		FA7A9ECD13CA1C120007C021 /* drag_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drag_right.png; sourceTree = "<group>"; };
+		FA7A9ED013CA371F0007C021 /* GenericImageBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericImageBox.h; sourceTree = "<group>"; };
+		FA7A9ED113CA371F0007C021 /* GenericImageBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericImageBox.m; sourceTree = "<group>"; };
+		FA7A9ED313CA379F0007C021 /* GenericLeftBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericLeftBox.h; sourceTree = "<group>"; };
+		FA7A9ED413CA379F0007C021 /* GenericLeftBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericLeftBox.m; sourceTree = "<group>"; };
+		FA7A9ED613CA37BC0007C021 /* GenericRightBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericRightBox.h; sourceTree = "<group>"; };
+		FA7A9ED713CA37BC0007C021 /* GenericRightBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericRightBox.m; sourceTree = "<group>"; };
+		FA7A9EDE13CA46B30007C021 /* button_regular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_regular.png; sourceTree = "<group>"; };
+		FA7A9EE113CA71210007C021 /* button_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_press.png; sourceTree = "<group>"; };
+		FA7A9EE413CA77150007C021 /* trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash.png; sourceTree = "<group>"; };
+		FA7A9EE513CA77150007C021 /* recycling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recycling.png; sourceTree = "<group>"; };
+		FA7A9EEA13CA773E0007C021 /* Levels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Levels.plist; sourceTree = "<group>"; };
+		FA7A9EEC13CA79D50007C021 /* TrashRecycling.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TrashRecycling.plist; sourceTree = "<group>"; };
+		FA7A9EEE13CA7D400007C021 /* AdventureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdventureViewController.h; sourceTree = "<group>"; };
+		FA7A9EEF13CA7D410007C021 /* AdventureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdventureViewController.m; sourceTree = "<group>"; };
+		FA7A9EF213CA82300007C021 /* CountdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownView.h; sourceTree = "<group>"; };
+		FA7A9EF313CA82300007C021 /* CountdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownView.m; sourceTree = "<group>"; };
+		FA7A9EF513CA86D40007C021 /* AfterActionReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfterActionReportViewController.h; sourceTree = "<group>"; };
+		FA7A9EF613CA86D40007C021 /* AfterActionReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfterActionReportViewController.m; sourceTree = "<group>"; };
+		FA7A9EF813CA92FF0007C021 /* belt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = belt.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +144,8 @@
 		FA15D01513C8F83700E2CEB6 /* Corners */ = {
 			isa = PBXGroup;
 			children = (
-				FA15D01613C8F84500E2CEB6 /* drop apple.png */,
-				FA15D01713C8F84500E2CEB6 /* drop broccoli.png */,
+				FA7A9ECC13CA1C120007C021 /* drag_left.png */,
+				FA7A9ECD13CA1C120007C021 /* drag_right.png */,
 			);
 			name = Corners;
 			sourceTree = "<group>";
@@ -120,8 +153,8 @@
 		FA15D06613C924FC00E2CEB6 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				FA7A9EC313CA030A0007C021 /* newgame_regular.png */,
-				FA7A9EC113CA02DD0007C021 /* newgame_press.png */,
+				FA7A9EE113CA71210007C021 /* button_press.png */,
+				FA7A9EDE13CA46B30007C021 /* button_regular.png */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -157,6 +190,8 @@
 		FA69346613C78E3C002AEF34 /* BoxScreensaver */ = {
 			isa = PBXGroup;
 			children = (
+				FA7A9EF113CA821B0007C021 /* Game Views */,
+				FA7A9EC813CA06830007C021 /* Levels */,
 				FA15D01413C8F31B00E2CEB6 /* Sort Box */,
 				FA69349913C8A03B002AEF34 /* Food */,
 				FA69348613C793DB002AEF34 /* Runway */,
@@ -164,8 +199,6 @@
 				FA69347013C78E3C002AEF34 /* BoxScreensaverAppDelegate.m */,
 				FA69347513C78E3C002AEF34 /* BoxScreensaverViewController.h */,
 				FA69347613C78E3C002AEF34 /* BoxScreensaverViewController.m */,
-				FA15D01D13C8F91000E2CEB6 /* SortGameViewController.h */,
-				FA15D01E13C8F91000E2CEB6 /* SortGameViewController.m */,
 				FA15D02013C8FE9A00E2CEB6 /* GameScore.h */,
 				FA15D02113C91D3900E2CEB6 /* MenuBackground.h */,
 				FA15D02213C91D3900E2CEB6 /* MenuBackground.m */,
@@ -177,6 +210,7 @@
 		FA69346713C78E3C002AEF34 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA7A9EC513CA05770007C021 /* Levels */,
 				FA6934A013C8A33E002AEF34 /* Images */,
 				FA69347213C78E3C002AEF34 /* MainWindow.xib */,
 				FA69347813C78E3C002AEF34 /* BoxScreensaverViewController.xib */,
@@ -215,10 +249,10 @@
 		FA6934A013C8A33E002AEF34 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FA7A9EF813CA92FF0007C021 /* belt.png */,
+				FA7A9EE313CA770A0007C021 /* Stages */,
 				FA15D06613C924FC00E2CEB6 /* Buttons */,
 				FA15D01513C8F83700E2CEB6 /* Corners */,
-				FA6934A313C8A45E002AEF34 /* broccoli_large.png */,
-				FA6934A113C8A348002AEF34 /* apple_large.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -236,6 +270,73 @@
 				FA6934B613C8C735002AEF34 /* ViewPositionAnimation.m */,
 			);
 			name = Animations;
+			sourceTree = "<group>";
+		};
+		FA7A9EC513CA05770007C021 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				FA7A9EC613CA05930007C021 /* AppleBroccoli.plist */,
+				FA7A9EEC13CA79D50007C021 /* TrashRecycling.plist */,
+				FA7A9EEA13CA773E0007C021 /* Levels.plist */,
+			);
+			name = Levels;
+			sourceTree = "<group>";
+		};
+		FA7A9EC813CA06830007C021 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				FA7A9EC913CA06990007C021 /* GameLevel.h */,
+				FA7A9ECA13CA06990007C021 /* GameLevel.m */,
+				FA7A9ED013CA371F0007C021 /* GenericImageBox.h */,
+				FA7A9ED113CA371F0007C021 /* GenericImageBox.m */,
+				FA7A9ED313CA379F0007C021 /* GenericLeftBox.h */,
+				FA7A9ED413CA379F0007C021 /* GenericLeftBox.m */,
+				FA7A9ED613CA37BC0007C021 /* GenericRightBox.h */,
+				FA7A9ED713CA37BC0007C021 /* GenericRightBox.m */,
+			);
+			name = Levels;
+			sourceTree = "<group>";
+		};
+		FA7A9EE313CA770A0007C021 /* Stages */ = {
+			isa = PBXGroup;
+			children = (
+				FA7A9EE913CA77260007C021 /* Trash vs Recycling */,
+				FA7A9EE813CA77180007C021 /* Apples vs Broccoli */,
+			);
+			name = Stages;
+			sourceTree = "<group>";
+		};
+		FA7A9EE813CA77180007C021 /* Apples vs Broccoli */ = {
+			isa = PBXGroup;
+			children = (
+				FA6934A313C8A45E002AEF34 /* broccoli_large.png */,
+				FA6934A113C8A348002AEF34 /* apple_large.png */,
+			);
+			name = "Apples vs Broccoli";
+			sourceTree = "<group>";
+		};
+		FA7A9EE913CA77260007C021 /* Trash vs Recycling */ = {
+			isa = PBXGroup;
+			children = (
+				FA7A9EE413CA77150007C021 /* trash.png */,
+				FA7A9EE513CA77150007C021 /* recycling.png */,
+			);
+			name = "Trash vs Recycling";
+			sourceTree = "<group>";
+		};
+		FA7A9EF113CA821B0007C021 /* Game Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA15D01D13C8F91000E2CEB6 /* SortGameViewController.h */,
+				FA15D01E13C8F91000E2CEB6 /* SortGameViewController.m */,
+				FA7A9EEE13CA7D400007C021 /* AdventureViewController.h */,
+				FA7A9EEF13CA7D410007C021 /* AdventureViewController.m */,
+				FA7A9EF513CA86D40007C021 /* AfterActionReportViewController.h */,
+				FA7A9EF613CA86D40007C021 /* AfterActionReportViewController.m */,
+				FA7A9EF213CA82300007C021 /* CountdownView.h */,
+				FA7A9EF313CA82300007C021 /* CountdownView.m */,
+			);
+			name = "Game Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,10 +391,16 @@
 				FA69347A13C78E3C002AEF34 /* BoxScreensaverViewController.xib in Resources */,
 				FA6934A213C8A348002AEF34 /* apple_large.png in Resources */,
 				FA6934A413C8A45E002AEF34 /* broccoli_large.png in Resources */,
-				FA15D01813C8F84500E2CEB6 /* drop apple.png in Resources */,
-				FA15D01913C8F84500E2CEB6 /* drop broccoli.png in Resources */,
-				FA7A9EC213CA02DD0007C021 /* newgame_press.png in Resources */,
-				FA7A9EC413CA030A0007C021 /* newgame_regular.png in Resources */,
+				FA7A9EC713CA05930007C021 /* AppleBroccoli.plist in Resources */,
+				FA7A9ECE13CA1C120007C021 /* drag_left.png in Resources */,
+				FA7A9ECF13CA1C120007C021 /* drag_right.png in Resources */,
+				FA7A9EE013CA46B30007C021 /* button_regular.png in Resources */,
+				FA7A9EE213CA71210007C021 /* button_press.png in Resources */,
+				FA7A9EE613CA77150007C021 /* trash.png in Resources */,
+				FA7A9EE713CA77150007C021 /* recycling.png in Resources */,
+				FA7A9EEB13CA773E0007C021 /* Levels.plist in Resources */,
+				FA7A9EED13CA79D50007C021 /* TrashRecycling.plist in Resources */,
+				FA7A9EF913CA93000007C021 /* belt.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +425,13 @@
 				FA15D01F13C8F91000E2CEB6 /* SortGameViewController.m in Sources */,
 				FA15D02313C91D3900E2CEB6 /* MenuBackground.m in Sources */,
 				FA7A9EBC13C9F8030007C021 /* EaseOutSmoothAnimation.m in Sources */,
+				FA7A9ECB13CA06990007C021 /* GameLevel.m in Sources */,
+				FA7A9ED213CA371F0007C021 /* GenericImageBox.m in Sources */,
+				FA7A9ED513CA379F0007C021 /* GenericLeftBox.m in Sources */,
+				FA7A9ED813CA37BC0007C021 /* GenericRightBox.m in Sources */,
+				FA7A9EF013CA7D420007C021 /* AdventureViewController.m in Sources */,
+				FA7A9EF413CA82300007C021 /* CountdownView.m in Sources */,
+				FA7A9EF713CA86D40007C021 /* AfterActionReportViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

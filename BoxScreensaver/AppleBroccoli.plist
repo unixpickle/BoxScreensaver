@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Name</key>
+	<string>Apples vs Broccoli</string>
+	<key>ClassLeft</key>
+	<string>GenericLeftBox</string>
+	<key>ClassRight</key>
+	<string>GenericRightBox</string>
+	<key>CornerLeftImage</key>
+	<string>broccoli_large.png</string>
+	<key>CornerRightImage</key>
+	<string>apple_large.png</string>
+	<key>Max Deaths</key>
+	<string>3</string>
+	<key>LeftImage</key>
+	<string>broccoli_large.png</string>
+	<key>RightImage</key>
+	<string>apple_large.png</string>
+</dict>
+</plist>
