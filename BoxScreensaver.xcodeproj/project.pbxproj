@@ -46,7 +46,11 @@
 		FA7A9EF013CA7D420007C021 /* AdventureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7A9EEF13CA7D410007C021 /* AdventureViewController.m */; };
 		FA7A9EF413CA82300007C021 /* CountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7A9EF313CA82300007C021 /* CountdownView.m */; };
 		FA7A9EF713CA86D40007C021 /* AfterActionReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7A9EF613CA86D40007C021 /* AfterActionReportViewController.m */; };
-		FA7A9EF913CA93000007C021 /* belt.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9EF813CA92FF0007C021 /* belt.png */; };
+		FA7A9EFD13CA94D90007C021 /* ChangingTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7A9EFC13CA94D90007C021 /* ChangingTimer.m */; };
+		FA7A9F0213CA9FA80007C021 /* soccer.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9EFF13CA9FA80007C021 /* soccer.png */; };
+		FA7A9F0313CA9FA80007C021 /* football_small.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9F0013CA9FA80007C021 /* football_small.png */; };
+		FA7A9F0413CA9FA80007C021 /* football_large.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9F0113CA9FA80007C021 /* football_large.png */; };
+		FA7A9F0613CA9FC40007C021 /* FootballSoccer.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA7A9F0513CA9FC40007C021 /* FootballSoccer.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,7 +118,12 @@
 		FA7A9EF313CA82300007C021 /* CountdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownView.m; sourceTree = "<group>"; };
 		FA7A9EF513CA86D40007C021 /* AfterActionReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfterActionReportViewController.h; sourceTree = "<group>"; };
 		FA7A9EF613CA86D40007C021 /* AfterActionReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfterActionReportViewController.m; sourceTree = "<group>"; };
-		FA7A9EF813CA92FF0007C021 /* belt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = belt.png; sourceTree = "<group>"; };
+		FA7A9EFB13CA94D90007C021 /* ChangingTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangingTimer.h; sourceTree = "<group>"; };
+		FA7A9EFC13CA94D90007C021 /* ChangingTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangingTimer.m; sourceTree = "<group>"; };
+		FA7A9EFF13CA9FA80007C021 /* soccer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soccer.png; sourceTree = "<group>"; };
+		FA7A9F0013CA9FA80007C021 /* football_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football_small.png; sourceTree = "<group>"; };
+		FA7A9F0113CA9FA80007C021 /* football_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football_large.png; sourceTree = "<group>"; };
+		FA7A9F0513CA9FC40007C021 /* FootballSoccer.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FootballSoccer.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +199,7 @@
 		FA69346613C78E3C002AEF34 /* BoxScreensaver */ = {
 			isa = PBXGroup;
 			children = (
+				FA7A9EFA13CA94C20007C021 /* Util */,
 				FA7A9EF113CA821B0007C021 /* Game Views */,
 				FA7A9EC813CA06830007C021 /* Levels */,
 				FA15D01413C8F31B00E2CEB6 /* Sort Box */,
@@ -199,7 +209,6 @@
 				FA69347013C78E3C002AEF34 /* BoxScreensaverAppDelegate.m */,
 				FA69347513C78E3C002AEF34 /* BoxScreensaverViewController.h */,
 				FA69347613C78E3C002AEF34 /* BoxScreensaverViewController.m */,
-				FA15D02013C8FE9A00E2CEB6 /* GameScore.h */,
 				FA15D02113C91D3900E2CEB6 /* MenuBackground.h */,
 				FA15D02213C91D3900E2CEB6 /* MenuBackground.m */,
 				FA69346713C78E3C002AEF34 /* Supporting Files */,
@@ -249,7 +258,6 @@
 		FA6934A013C8A33E002AEF34 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				FA7A9EF813CA92FF0007C021 /* belt.png */,
 				FA7A9EE313CA770A0007C021 /* Stages */,
 				FA15D06613C924FC00E2CEB6 /* Buttons */,
 				FA15D01513C8F83700E2CEB6 /* Corners */,
@@ -277,6 +285,7 @@
 			children = (
 				FA7A9EC613CA05930007C021 /* AppleBroccoli.plist */,
 				FA7A9EEC13CA79D50007C021 /* TrashRecycling.plist */,
+				FA7A9F0513CA9FC40007C021 /* FootballSoccer.plist */,
 				FA7A9EEA13CA773E0007C021 /* Levels.plist */,
 			);
 			name = Levels;
@@ -300,6 +309,7 @@
 		FA7A9EE313CA770A0007C021 /* Stages */ = {
 			isa = PBXGroup;
 			children = (
+				FA7A9EFE13CA9F9A0007C021 /* Football vs Soccer */,
 				FA7A9EE913CA77260007C021 /* Trash vs Recycling */,
 				FA7A9EE813CA77180007C021 /* Apples vs Broccoli */,
 			);
@@ -327,6 +337,7 @@
 		FA7A9EF113CA821B0007C021 /* Game Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA15D02013C8FE9A00E2CEB6 /* GameScore.h */,
 				FA15D01D13C8F91000E2CEB6 /* SortGameViewController.h */,
 				FA15D01E13C8F91000E2CEB6 /* SortGameViewController.m */,
 				FA7A9EEE13CA7D400007C021 /* AdventureViewController.h */,
@@ -337,6 +348,25 @@
 				FA7A9EF313CA82300007C021 /* CountdownView.m */,
 			);
 			name = "Game Views";
+			sourceTree = "<group>";
+		};
+		FA7A9EFA13CA94C20007C021 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FA7A9EFB13CA94D90007C021 /* ChangingTimer.h */,
+				FA7A9EFC13CA94D90007C021 /* ChangingTimer.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		FA7A9EFE13CA9F9A0007C021 /* Football vs Soccer */ = {
+			isa = PBXGroup;
+			children = (
+				FA7A9EFF13CA9FA80007C021 /* soccer.png */,
+				FA7A9F0013CA9FA80007C021 /* football_small.png */,
+				FA7A9F0113CA9FA80007C021 /* football_large.png */,
+			);
+			name = "Football vs Soccer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,7 +430,10 @@
 				FA7A9EE713CA77150007C021 /* recycling.png in Resources */,
 				FA7A9EEB13CA773E0007C021 /* Levels.plist in Resources */,
 				FA7A9EED13CA79D50007C021 /* TrashRecycling.plist in Resources */,
-				FA7A9EF913CA93000007C021 /* belt.png in Resources */,
+				FA7A9F0213CA9FA80007C021 /* soccer.png in Resources */,
+				FA7A9F0313CA9FA80007C021 /* football_small.png in Resources */,
+				FA7A9F0413CA9FA80007C021 /* football_large.png in Resources */,
+				FA7A9F0613CA9FC40007C021 /* FootballSoccer.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +465,7 @@
 				FA7A9EF013CA7D420007C021 /* AdventureViewController.m in Sources */,
 				FA7A9EF413CA82300007C021 /* CountdownView.m in Sources */,
 				FA7A9EF713CA86D40007C021 /* AfterActionReportViewController.m in Sources */,
+				FA7A9EFD13CA94D90007C021 /* ChangingTimer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#include "GameScore.h"
+#import "AfterActionReportViewController.h"
 #import "BoxRunway.h"
 #import "CornerDropper.h"
-#include "GameScore.h"
 #import "GameLevel.h"
 #import "CountdownView.h"
-#import "AfterActionReportViewController.h"
+#import "ChangingTimer.h"
 
-@interface SortGameViewController : UIViewController {
+@interface SortGameViewController : UIViewController <ChangingTimerDelegate> {
     BoxRunway * runway;
 	GameLevel * level;
 	CornerDropper * leftDrop;
@@ -23,9 +24,10 @@
 	UILabel * pointsLabel;
 	UILabel * lossesLabel;
 	CGFloat duration;
-	BOOL isGameGoing;
-	UInt32 animationID; // the animation ID of the nextItem method to show.
+	ChangingTimer * itemTimer;
 }
+
+@property (readonly) struct GameScore gameScore;
 
 - (void)startGame:(GameLevel *)aLevel;
 
@@ -35,7 +37,7 @@
  * If this is not nil, and animationID (global ivar) is different than this
  * arguments int value, the nextItem method will return without doing anything.
  */
-- (void)nextItem:(NSNumber *)theAnimationID;
+- (void)nextItem;
 
 /**
  * Called by a countdown view to indicate that the countdown is done

@@ -9,4 +9,5 @@
 struct GameScore {
 	int points;
 	int losses;
+	BOOL isGameOver;
 };

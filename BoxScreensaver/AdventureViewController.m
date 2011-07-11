@@ -81,8 +81,11 @@
 */
 
 - (void)viewWillAppear:(BOOL)animated {
-	if (countdownTimer) return;
-	countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(decrementSeconds) userInfo:nil repeats:YES];
+	if ([self gameScore].isGameOver == NO) {
+		if (!countdownTimer) {
+			countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(decrementSeconds) userInfo:nil repeats:YES];
+		}
+	}
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

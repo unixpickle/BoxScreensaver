@@ -6,11 +6,15 @@
 	<array>
 		<dict>
 			<key>Resource</key>
-			<string>AppleBroccoli.plist</string>
+			<string>FootballSoccer.plist</string>
 		</dict>
 		<dict>
 			<key>Resource</key>
 			<string>TrashRecycling.plist</string>
+		</dict>
+		<dict>
+			<key>Resource</key>
+			<string>AppleBroccoli.plist</string>
 		</dict>
 	</array>
 </dict>
